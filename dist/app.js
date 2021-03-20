@@ -83,6 +83,10 @@ ProverbsVerses.prototype.render = function() {
 	});
 }
 
+ProverbsVerses.prototype.toggleBookmark = function() {
+  console.log("toggleBookmark");
+}
+
 ProverbsVerses.prototype.template = function(data) {
 	return [
 		[

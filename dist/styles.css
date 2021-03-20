@@ -18,9 +18,11 @@
   src: url(ankecallig-fg.ttf);
 }
 
-body {
-  /* font-family: 'Anke'; */
+html * {
   font-family: Otto, Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
   text-align: center;
   background: #f5f5dc;
   color: #333333;
@@ -40,19 +42,29 @@ h1 {
 h2 {
   font-size: 4rem;
   color: grey;
-  /* font-family: Gabrielle; */
   font-weight: normal;
 }
 
 p {
-  /* font-family: 'Anke'; */
-  /* font-size: 36px; */
   font-size: 2rem;
   font-weight: normal;
 }
 
-/* @TODO: Add font */
+.bookmark-button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
 
+.bookmark-button:focus {
+  outline: none;
+}
+
+.bookmark-button #bookmark-filled {
+  color: #F4C2C2;
+}
+
+/* @TODO: Add font */
 .bottom-nav {
   display: flex;
   position: fixed;
@@ -73,8 +85,9 @@ p {
 }
 
 .button-text {
+  font-size: 4rem;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
