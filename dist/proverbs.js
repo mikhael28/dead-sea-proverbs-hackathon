@@ -1,6 +1,19 @@
 var proverbs = {
 	book: 'Proverbs',
-	map: [ [ 0, 1 ] ],
+	map: [
+		[ 1, 2 ],
+		[ 3, 4 ],
+		[ 5, 6 ],
+		[ 7, 8 ],
+		[ 9, 10 ],
+		[ 11, 12 ],
+		[ 13, 18 ],
+		[ 19, 26 ],
+		[ 27, 28 ],
+		[ 29, 30 ],
+		[31, 32],
+		[ 33, 35]
+	],
 	chapters: [
 		// {
 		// 	chapter: '1',
@@ -324,7 +337,7 @@ var proverbs = {
 					verse: '29',
 					text: 'Devise not evil against thy neighbour, seeing he dwelleth securely by thee.'
 				},
-				{ verse: '30', text: 'Strive not with a man without cause, if he have done thee no harm.' },
+				{ verse: '30', text: 'Strife not with a man without cause, if he have done thee no harm.' },
 				{
 					verse: '31',
 					text: 'Envy thou not the oppressor, and choose none of his ways.'
