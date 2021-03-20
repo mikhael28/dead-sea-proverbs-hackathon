@@ -25,6 +25,8 @@ function showVerses() {
 
 function ProverbsVerses(elem, data) {
 	this.data = data;
+
+	// load from storage
 	this.selectedChapterIndex = 0;
 	this.selectedMapIndex = 0;
 	this.elem = elem;
@@ -32,9 +34,9 @@ function ProverbsVerses(elem, data) {
 
 ProverbsVerses.prototype.nextChapterIndex = function() {
 	if ((this.selectedChapterIndex + 1) >= this.data.chapters.length) {
-		this.selectedChapterIndex = 0;
+    this.setChapterIndex(0);
 	} else {
-		this.selectedChapterIndex += 1;
+    setChapterIndex(this.selectedChapterIndex + 1);
 	}
 }
 
@@ -42,16 +44,16 @@ ProverbsVerses.prototype.prevChapterIndex = function() {
 	if ((this.selectedChapterIndex - 1) < 0) {
 		this.selectedChapterIndex = this.data.chapters.length - 1;
 	} else {
-		this.selectedChapterIndex -= 1;
+    setChapterIndex(this.selectedChapterIndex - 1);
 	}
 }
 
 ProverbsVerses.prototype.next = function() {
 	if ((this.selectedMapIndex + 1) >= this.data.map[this.selectedChapterIndex].length) {
 		this.nextChapterIndex();
-		this.selectedMapIndex = 0;
+		this.setMapIndex(0);
 	} else {
-		this.selectedMapIndex += 1;
+	  this.setMapIndex(this.selectedMapIndex + 1);
 	}
 
 	this.render();
@@ -62,10 +64,20 @@ ProverbsVerses.prototype.prev = function() {
 		this.prevChapterIndex();
 		this.selectedMapIndex = this.data.map[this.selectedChapterIndex].length - 1;
 	} else {
-		this.selectedMapIndex -= 1;
+    this.setMapIndex(this.selectedMapIndex - 1);
 	}
 
 	this.render();
+}
+
+ProverbsVerses.prototype.setChapterIndex = function(index) {
+  this.selectedChapterIndex = index;
+  localStorage.setItem('chapterIndex', this.selectedChapterIndex);
+}
+
+ProverbsVerses.prototype.setMapIndex = function(index) {
+  this.selectedMapIndex = index;
+  localStorage.setItem('mapIndex', this.selectedMapIndex);
 }
 
 ProverbsVerses.prototype.render = function() {
@@ -81,14 +93,6 @@ ProverbsVerses.prototype.render = function() {
 		startVerse: startVerse,
 		endVerse: endVerse
 	});
-}
-
-ProverbsVerses.prototype.toggleBookmark = function() {
-  const bookmark = {
-    chapter: 1,
-    verse: 2
-  }
-  localStorage.setItem('bookmark', JSON.stringify(bookmark));
 }
 
 ProverbsVerses.prototype.template = function(data) {
