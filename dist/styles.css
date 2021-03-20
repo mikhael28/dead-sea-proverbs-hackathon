@@ -23,7 +23,7 @@ html * {
 }
 
 body {
-  text-align: center;
+  /*text-align: center;*/
   background: white;
   color: #333333;
   margin: 0px;
@@ -32,6 +32,11 @@ body {
 body #bookmark {
   display: flex;
   justify-content: flex-end;
+}
+
+body #scriptures {
+  padding: 7rem;
+  margin-bottom: 10vh;
 }
 
 h1 {
@@ -66,7 +71,7 @@ p {
 }
 
 .bottom-nav {
-  position: fixed; 
+  position: fixed;
   bottom: 0;
   height: 10vh;
   width: 100%;
