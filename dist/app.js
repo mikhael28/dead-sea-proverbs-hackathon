@@ -94,7 +94,7 @@ ProverbsVerses.prototype.template = function(data) {
 		].join(""),
 		'<hr style="width: 75%" />',
 		'<div class="verses">',
-			data.verses.map(function(verse) { return '<p>'+verse.text+'</p>'}).join("\n"),
+			data.verses.map(function(verse) { return '<h1>'+verse.text+'</h1>'}).join("\n"),
 		'</div>',
 	].join("\n");
 }

@@ -20,20 +20,26 @@
 
 body {
   /* font-family: 'Anke'; */
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Otto, Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   background: #f5f5dc;
   color: #333333;
   padding: 1rem;
 }
 
+body #bookmark {
+  display: flex;
+  justify-content: flex-end;
+}
+
 h1 {
-  font-size: 48px;
+  font-size: 5rem;
   font-weight: normal;
 }
 
 h2 {
-  font-size: 38px;
+  font-size: 4rem;
+  color: grey;
   /* font-family: Gabrielle; */
   font-weight: normal;
 }
