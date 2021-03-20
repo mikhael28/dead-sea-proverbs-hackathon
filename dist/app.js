@@ -56,8 +56,8 @@ ProverbsVerses.prototype.setMapIndex = function(index) {
 
 ProverbsVerses.prototype.isBookmarked = function(chapterIndex, mapIndex) {
 	var bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
-	var id = `${chapterIndex}:${mapIndex}`;
-	var foundIndex = bookmarks.map((b) => b.id).indexOf(id);
+	var id = chapterIndex +':'+ mapIndex;
+	var foundIndex = bookmarks.map(function (bookmark) { return bookmark.id }).indexOf(id);
 
 	var outline = document.getElementById('bookmark-outline');
 	var filled = document.getElementById('bookmark-filled');
@@ -77,13 +77,13 @@ ProverbsVerses.prototype.toggleBookmark = function() {
 	var bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
 
 	if (this.isBookmarked(this.selectedChapterIndex, this.selectedMapIndex)) {
-		var id = `${this.selectedChapterIndex}:${this.selectedMapIndex}`;
-		var foundIndex = bookmarks.map((b) => b.id).indexOf(id);
+		var id = this.selectedChapterIndex +':'+ this.selectedMapIndex;
+		var foundIndex = bookmarks.map(function (bookmark) { return bookmark.id }).indexOf(id);
 		bookmarks.splice(foundIndex, 1);
 		localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 	} else {
 		var newBookmark = {
-			id: `${this.selectedChapterIndex}:${this.selectedMapIndex}`,
+			id: this.selectedChapterIndex +':'+ this.selectedMapIndex,
 			chapterIndex: this.selectedChapterIndex,
 			mapIndex: this.selectedMapIndex
 		};
