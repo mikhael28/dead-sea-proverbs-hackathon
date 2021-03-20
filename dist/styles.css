@@ -113,13 +113,14 @@ h2 {
   }
 }
 
-p {
+.theme-handwriting p {
   font-size: 42px;
   font-weight: normal;
 }
 
 .theme-georgia p {
   font-size: 32px;
+  font-weight: normal;
 }
 
 .bookmark-button {
@@ -157,19 +158,35 @@ p {
  font-size: 126px;
 }
 
+.theme-georgia .verses.text-normal {
+  font-size: 95px;
+}
+
 .verses.text-med {
 font-size: 112px;
+}
+
+.theme-georgia .verses.text-med {
+  font-size: 84px;
 }
 
 .verses.text-small {
 font-size: 68px;
 }
 
+.theme-georgia .verses.text-small {
+  font-size: 51px;
+}
+
 .verses.text-extra-small {
   font-size: 60px;
 }
 
-.verses-georgia.text-normal {
+.theme-georgia .verses.text-extra-small {
+  font-size: 60px;
+}
+
+/* .verses-georgia.text-normal {
   font-size: 126px;
  }
  
@@ -183,7 +200,7 @@ font-size: 68px;
  
  .verses-georgia.text-extra-small {
    font-size: 60px;
- }
+ } */
 
 .left {
   width: 50%;
