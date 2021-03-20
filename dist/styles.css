@@ -29,30 +29,45 @@ body {
   margin: 0px;
 }
 
-body #bookmark {
-  display: flex;
-  justify-content: flex-end;
+#bookmark {
+  position: absolute;
+  right: 0;
 }
 
-body #scriptures {
-  padding: 2rem 6rem;
-  margin-bottom: 10vh;
+#scriptures {
+  padding: 16px;
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 46px;
   font-weight: normal;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 40px;
   color: grey;
   font-weight: normal;
   margin: 0;
 }
 
+@media screen and (device-width: 1072px) {
+  h1 {
+    font-size: 146px;
+    font-weight: normal;
+  }
+
+  h2 {
+    font-size: 60px;
+    color: grey;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+
 p {
-  font-size: 2rem;
+  font-size: 42px;
   font-weight: normal;
 }
 
@@ -78,14 +93,11 @@ p {
   height: 10vh;
   width: 100%;
   background-color: #f3f3e5;
-  display: flex;
   cursor: pointer;
 }
 
-.bottom-nav div {
-  width: 50vw;
-  padding-top: 3vh;
-  padding-left: 25vw;
+.side-center {
+  margin: 0px auto;
 }
 
 .verses.text-normal {
@@ -102,4 +114,20 @@ p {
 
 .verses.text-extra-small {
   /* font-size: */
+}
+
+.left {
+  width: 50%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  text-align: center;
+}
+
+.right {
+  width: 50%;
+  float: right;
+  position: relative;
+  min-height: 1px;
+  text-align: center;
 }
