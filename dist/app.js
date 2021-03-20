@@ -30,6 +30,8 @@ ProverbsVerses.prototype.next = function() {
 		this.setMapIndex(this.selectedMapIndex + 1);
 	}
 
+	window.location.href = "#page";
+
 	this.render();
 };
 
@@ -40,6 +42,8 @@ ProverbsVerses.prototype.prev = function() {
 	} else {
 		this.setMapIndex(this.selectedMapIndex - 1);
 	}
+
+	window.location.href = "#page";
 
 	this.render();
 };
@@ -108,7 +112,6 @@ ProverbsVerses.prototype.render = function() {
 		startVerse: startVerse,
 		endVerse: endVerse
 	});
-	window.location.href = "#page";
 };
 
 ProverbsVerses.prototype.template = function(data) {
