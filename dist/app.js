@@ -53,6 +53,19 @@ ProverbsVerses.prototype.setMapIndex = function(index) {
   localStorage.setItem('mapIndex', this.selectedMapIndex);
 }
 
+ProverbsVerses.prototype.toggleBookmark = function() {
+  const outline = document.getElementById("bookmark-outline");
+  const filled = document.getElementById("bookmark-filled");
+  const isBookmarked = outline.style.display === 'none';
+  if(isBookmarked) {
+      outline.style.display = 'block';
+      filled.style.display = 'none';
+  } else {
+    outline.style.display = 'none';
+    filled.style.display = 'block';
+  }
+}
+
 ProverbsVerses.prototype.render = function() {
 	var chapter = this.data.chapters[this.selectedChapterIndex];
 	var proverbsMap = this.data.map[this.selectedChapterIndex][this.selectedMapIndex];
