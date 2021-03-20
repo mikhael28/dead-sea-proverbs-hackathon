@@ -154,35 +154,35 @@ h2 {
   /* margin: 0px auto; */
 }
 
-.verses.text-normal {
- font-size: 126px;
+.verses.text-normal p {
+  font-size: 126px;
 }
 
-.theme-georgia .verses.text-normal {
+.theme-georgia .verses.text-normal p {
   font-size: 95px;
 }
 
-.verses.text-med {
-font-size: 112px;
+.verses.text-med p {
+  font-size: 112px;
 }
 
-.theme-georgia .verses.text-med {
+.theme-georgia .verses.text-med p {
   font-size: 84px;
 }
 
-.verses.text-small {
+.verses.text-small p {
 font-size: 68px;
 }
 
-.theme-georgia .verses.text-small {
+.theme-georgia .verses.text-small p {
   font-size: 51px;
 }
 
-.verses.text-extra-small {
+.verses.text-extra-small p {
   font-size: 60px;
 }
 
-.theme-georgia .verses.text-extra-small {
+.theme-georgia .verses.text-extra-small p {
   font-size: 60px;
 }
 
