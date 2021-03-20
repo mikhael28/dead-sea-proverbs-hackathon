@@ -55,12 +55,12 @@ ProverbsVerses.prototype.setMapIndex = function(index) {
 };
 
 ProverbsVerses.prototype.isBookmarked = function(chapterIndex, mapIndex) {
-	const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
-	const id = `${chapterIndex}:${mapIndex}`;
-	const foundIndex = bookmarks.map((b) => b.id).indexOf(id);
+	var bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
+	var id = `${chapterIndex}:${mapIndex}`;
+	var foundIndex = bookmarks.map((b) => b.id).indexOf(id);
 
-	const outline = document.getElementById('bookmark-outline');
-	const filled = document.getElementById('bookmark-filled');
+	var outline = document.getElementById('bookmark-outline');
+	var filled = document.getElementById('bookmark-filled');
 
 	if (foundIndex > -1) {
 		outline.style.display = 'none';
@@ -74,15 +74,15 @@ ProverbsVerses.prototype.isBookmarked = function(chapterIndex, mapIndex) {
 };
 
 ProverbsVerses.prototype.toggleBookmark = function() {
-	const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
+	var bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
 
 	if (this.isBookmarked(this.selectedChapterIndex, this.selectedMapIndex)) {
-		const id = `${this.selectedChapterIndex}:${this.selectedMapIndex}`;
-		const foundIndex = bookmarks.map((b) => b.id).indexOf(id);
+		var id = `${this.selectedChapterIndex}:${this.selectedMapIndex}`;
+		var foundIndex = bookmarks.map((b) => b.id).indexOf(id);
 		bookmarks.splice(foundIndex, 1);
 		localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 	} else {
-		const newBookmark = {
+		var newBookmark = {
 			id: `${this.selectedChapterIndex}:${this.selectedMapIndex}`,
 			chapterIndex: this.selectedChapterIndex,
 			mapIndex: this.selectedMapIndex

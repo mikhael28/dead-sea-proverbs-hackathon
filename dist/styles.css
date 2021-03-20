@@ -30,7 +30,8 @@ body {
 }
 
 #bookmark {
-  /* unused CSS */
+  position: absolute;
+  right: 0;
 }
 
 #scriptures {
@@ -55,7 +56,7 @@ h2 {
     font-size: 146px;
     font-weight: normal;
   }
-  
+
   h2 {
     font-size: 60px;
     color: grey;
