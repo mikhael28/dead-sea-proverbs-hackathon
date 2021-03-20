@@ -1,0 +1,1 @@
+# dead-sea-proverbs-hackathon
