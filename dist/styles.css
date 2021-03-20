@@ -22,14 +22,48 @@ html * {
   font-family: Otto, Georgia, 'Times New Roman', Times, serif;
 }
 
+html.theme-handwriting * {
+  font-family: Otto, Georgia, 'Times New Roman', Times, serif;
+}
+
+html.theme-georgia *  {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 body {
   color: #333333;
   margin: 0px;
 }
 
-#bookmark {
+.pageOptions {
   position: absolute;
   right: 0;
+  padding: 5px;
+}
+
+.themeToggle {
+  float: left;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.theme-handwriting .themeToggle span {
+  font-size: 44px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.theme-georgia .themeToggle span {
+  font-size: 44px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+#bookmark {
+  /* position: absolute;
+  right: 0; */
+  float: left;
 }
 
 #scriptures {
@@ -73,7 +107,7 @@ p {
 }
 
 .bookmark-button {
-  margin: 12px 12px 0 0;
+  /* margin: 12px 12px 0 0; */
   cursor: pointer;
   border: none;
   background-color: transparent;

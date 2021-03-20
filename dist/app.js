@@ -163,3 +163,40 @@ ProverbsVerses.prototype.homeScreenTemplate = function(data) {
 
 	].join("\n");
 }
+
+ProverbsVerses.prototype.toggleTheme = function() {
+	var htmlElem = window.document.getElementsByTagName('html')[0];
+
+	if (this.hasClass(htmlElem, "theme-handwriting")) {
+		this.addClass(htmlElem, "theme-georgia");
+		this.removeClass(htmlElem, "theme-handwriting");
+	} else {
+		this.addClass(htmlElem, "theme-handwriting");
+		this.removeClass(htmlElem, "theme-georgia");
+	}
+}
+
+// https://stackoverflow.com/questions/26736587/how-to-add-and-remove-classes-in-javascript-without-jquery
+
+ProverbsVerses.prototype.hasClass = function(el, className) {
+    if (el.classList)
+        return el.classList.contains(className);
+    return !!(new RegExp('(\\s|^)' + className + '(\\s|$)')).exec(el.className);
+}
+
+ProverbsVerses.prototype.addClass = function(el, className) {
+    if (el.classList)
+        el.classList.add(className)
+    else if (!this.hasClass(el, className))
+        el.className += " " + className;
+}
+
+ProverbsVerses.prototype.removeClass = function(el, className) {
+    if (el.classList)
+        el.classList.remove(className)
+    else if (this.hasClass(el, className))
+    {
+        var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+        el.className = el.className.replace(reg, ' ');
+    }
+}
