@@ -18,8 +18,8 @@
   src: url(ankecallig-fg.ttf);
 }
 
-html * {
-  font-family: Otto, Georgia, 'Times New Roman', Times, serif;
+html {
+  font-family: Otto;
 }
 
 html.theme-handwriting * {
@@ -33,6 +33,14 @@ html.theme-georgia *  {
 body {
   color: #333333;
   margin: 0px;
+  height: 100%;
+  overflow: auto;
+  scroll-behavior: auto;
+  overflow-y: scroll;
+}
+
+button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .pageOptions {
@@ -67,7 +75,7 @@ body {
 }
 
 #scriptures {
-  padding: 32px 32px 0;
+  padding: 32px;
 }
 
 #image {
@@ -88,18 +96,22 @@ h2 {
 
 @media screen and (device-width: 1072px) {
   h1 {
-    font-size: 126px;
+    font-size: 112px;
+    /* 60 px for extra small of 8*/
+    /* 68 px for verses of 6 */
+    /* 112px for three verses */
+    /* 126px for large, up to three verses easily */
     font-weight: normal;
+    margin: 8px;
   }
 
   h2 {
-    font-size: 148px;
+    font-size: 166px;
     color: grey;
     font-weight: normal;
     margin: 0;
   }
 }
-
 
 p {
   font-size: 42px;
@@ -124,33 +136,50 @@ p {
 
 .bottom-nav {
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   height: 100;
   width: 100%;
-  background-color: #f3f3e5;
+  /* background-color: #f3f3e5; */
   cursor: pointer;
+  margin: 0px;
 }
 
 .side-center {
-  margin: 0px auto;
+  /* margin: 0px auto; */
 }
 
 .verses.text-normal {
- /* font-size:  */
+ font-size: 126px;
 }
 
 .verses.text-med {
-/* font-size: */
+font-size: 112px;
 }
 
 .verses.text-small {
-/* font-size: */
+font-size: 68px;
 }
 
 .verses.text-extra-small {
-  /* font-size: */
+  font-size: 60px;
 }
+
+.verses-georgia.text-normal {
+  font-size: 126px;
+ }
+ 
+ .verses-georgia.text-med {
+ font-size: 112px;
+ }
+ 
+ .verses-georgia.text-small {
+ font-size: 68px;
+ }
+ 
+ .verses-georgia.text-extra-small {
+   font-size: 60px;
+ }
 
 .left {
   width: 50%;
@@ -158,6 +187,7 @@ p {
   position: relative;
   min-height: 1px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .right {
@@ -166,4 +196,6 @@ p {
   position: relative;
   min-height: 1px;
   text-align: center;
+  margin-bottom: 10px;
+
 }
