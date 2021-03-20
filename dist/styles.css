@@ -39,6 +39,10 @@ body {
   overflow-y: scroll;
 }
 
+p {
+  margin: 0px;
+}
+
 button {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -106,7 +110,7 @@ h2 {
   }
 
   h2 {
-    font-size: 166px;
+    font-size: 86px;
     color: grey;
     font-weight: normal;
     margin: 0;
