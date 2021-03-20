@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <script src="./proverbs.js" type="application/javascript"></script>
     <script src="./app.js" type="application/javascript"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <script
       src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
       data-auto-a11y="true"
@@ -22,18 +23,17 @@
     </section>
     <section id="scriptures">
         <h2>Proverbs <span id="reference-chapter">3</span>:<span id="reference-verse">3</span></h2>
-
-        <div class="verses">
-        </div>
-
     </section>
 
     <div class="bottom-nav">
-        <div class="previous-button" onclick="renderPrev()">
-            <i class="fas fa-arrow-left" style="font-size: 48px;"></i>
-        </div>
-        <div class="next-button" onclick="renderNext()">
-            <i class="fas fa-arrow-right" style="font-size: 48px;"></i>
+        <div class="side-center"> 
+
+            <div onclick="renderPrev()" class="left">
+                <i class="fas fa-arrow-left"  style="font-size: 48px;"></i>
+            </div>
+            <div onclick="renderNext()" class="right" >
+                <i class="fas fa-arrow-right " style="font-size: 48px;"></i>
+            </div>
         </div>
     </div>
 
