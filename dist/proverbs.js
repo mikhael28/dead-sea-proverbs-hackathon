@@ -14,7 +14,7 @@ var proverbs = {
 		[31, 32],
 		[ 33, 35]
 	],
-	chapters: [
+	chapters: [ 
 		// {
 		// 	chapter: '1',
 		// 	verses: [
