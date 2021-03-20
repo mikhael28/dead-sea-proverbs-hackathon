@@ -1,1 +1,0 @@
-(new class{constructor(){console.log("constructor")}log(...o){console.log(...o)}}).log("hello there!");

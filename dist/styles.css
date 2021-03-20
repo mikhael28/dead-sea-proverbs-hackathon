@@ -1,0 +1,105 @@
+@font-face {
+  font-family: Otto;
+  src: url(Otto.ttf);
+}
+
+@font-face {
+  font-family: Chancery;
+  src: url(chancur.tff);
+}
+
+@font-face {
+  font-family: Gabrielle;
+  src: url(DSGabriele.ttf);
+}
+
+@font-face {
+  font-family: Anke;
+  src: url(ankecallig-fg.ttf);
+}
+
+html * {
+  font-family: Otto, Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  /*text-align: center;*/
+  background: white;
+  color: #333333;
+  margin: 0px;
+}
+
+body #bookmark {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body #scriptures {
+  padding: 2rem 6rem;
+  margin-bottom: 10vh;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 4rem;
+  color: grey;
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.bookmark-button {
+  margin: 12px 12px 0 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.bookmark-button:focus {
+  outline: none;
+}
+
+.bookmark-button #bookmark-filled {
+  color: #98002e;
+  display: none;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+  background-color: #f3f3e5;
+  display: flex;
+  cursor: pointer;
+}
+
+.bottom-nav div {
+  width: 50vw;
+  padding-top: 3vh;
+  padding-left: 25vw;
+}
+
+.verses.text-normal {
+ /* font-size:  */
+}
+
+.verses.text-med {
+/* font-size: */
+}
+
+.verses.text-small {
+/* font-size: */
+}
+
+.verses.text-extra-small {
+  /* font-size: */
+}

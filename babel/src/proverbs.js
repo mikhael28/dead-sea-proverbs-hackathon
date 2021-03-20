@@ -1,4 +1,4 @@
-const proverbs = {
+var proverbs = {
   "book": "Proverbs",
   "chapters": [
     {
