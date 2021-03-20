@@ -22,6 +22,10 @@ ProverbsVerses.prototype.prevChapterIndex = function() {
 	}
 };
 
+ProverbsVerses.prototype.toTop = function() {
+	window.scrollTo(0,0);
+}
+
 ProverbsVerses.prototype.next = function() {
 	if (this.selectedMapIndex + 1 >= this.data.map[this.selectedChapterIndex].length) {
 		this.nextChapterIndex();
@@ -30,9 +34,8 @@ ProverbsVerses.prototype.next = function() {
 		this.setMapIndex(this.selectedMapIndex + 1);
 	}
 
-	window.location.href = "#page";
-
 	this.render();
+	this.toTop();
 };
 
 ProverbsVerses.prototype.prev = function() {
@@ -43,9 +46,8 @@ ProverbsVerses.prototype.prev = function() {
 		this.setMapIndex(this.selectedMapIndex - 1);
 	}
 
-	window.location.href = "#page";
-
 	this.render();
+	this.toTop();
 };
 
 ProverbsVerses.prototype.setChapterIndex = function(index) {
