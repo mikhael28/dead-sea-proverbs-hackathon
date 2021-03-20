@@ -1,20 +1,21 @@
-let indexOfCurrentVerse = 1;
+let indexOfFirstVerse = 1;
 
 function showLastVerse() {
   // TODO if verse = 1 -> go to previous chapter
-  if (indexOfCurrentVerse > 0) {
-    indexOfCurrentVerse--;
-    showVerse(0, indexOfCurrentVerse);
+  if (indexOfFirstVerse > 0) {
+    indexOfFirstVerse--;
+    showVerses();
   }
 }
 
 function showNextVerse() {
   // TODO if last verse -> go to next chapter
-  indexOfCurrentVerse++;
-  showVerse(0, indexOfCurrentVerse);
+  indexOfFirstVerse++;
+  showVerses();
 }
 
-function showVerse(chapter, verse) {
-  document.getElementById("reference-verse").innerText = '' + indexOfCurrentVerse;
-  document.getElementById("verse-a").innerText = proverbs.chapters[0].verses[verse].text;
+function showVerses() {
+  document.getElementById("reference-verse").innerText = '' + indexOfFirstVerse;
+  document.getElementById("verse-a").innerText = proverbs.chapters[0].verses[indexOfFirstVerse].text;
+  document.getElementById("verse-b").innerText = proverbs.chapters[0].verses[indexOfFirstVerse + 1].text;
 }
