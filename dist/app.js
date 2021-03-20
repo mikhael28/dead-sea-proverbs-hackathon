@@ -108,6 +108,7 @@ ProverbsVerses.prototype.render = function() {
 		startVerse: startVerse,
 		endVerse: endVerse
 	});
+	window.location.href = "#page";
 };
 
 ProverbsVerses.prototype.template = function(data) {
@@ -142,7 +143,6 @@ ProverbsVerses.prototype.getTextSizeClass = function(verses) {
 		return count + Math.ceil(verse.text.length / CHAR_PER_LINE) + 1;
 	}, 0);
 
-	console.log(lineCount);
 
 	if (lineCount > MAX) {
 		textSize = 'text-small';
