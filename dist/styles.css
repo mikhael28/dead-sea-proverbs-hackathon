@@ -48,6 +48,7 @@ h2 {
   font-size: 4rem;
   color: grey;
   font-weight: normal;
+  margin: 0;
 }
 
 p {
@@ -56,6 +57,7 @@ p {
 }
 
 .bookmark-button {
+  margin: 12px 12px 0 0;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -66,8 +68,8 @@ p {
 }
 
 .bookmark-button #bookmark-filled {
-  color: #F4C2C2;
-  /*display: none;*/
+  color: #98002e;
+  display: none;
 }
 
 .bottom-nav {
