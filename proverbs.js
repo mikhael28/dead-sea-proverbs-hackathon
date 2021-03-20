@@ -1,4 +1,4 @@
-export const proverbs = {
+const proverbs = {
   "book": "Proverbs",
   "chapters": [
     {
