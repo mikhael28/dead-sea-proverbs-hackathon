@@ -118,6 +118,10 @@ p {
   font-weight: normal;
 }
 
+.theme-georgia p {
+  font-size: 32px;
+}
+
 .bookmark-button {
   /* margin: 12px 12px 0 0; */
   cursor: pointer;

@@ -129,7 +129,7 @@ ProverbsVerses.prototype.template = function(data) {
 		'<div class="verses ' + textSizeClass + '">',
 		data.verses
 			.map(function(verse) {
-				return '<h1>' + verse.text + '</h1>';
+				return '<p>' + verse.text + '</p>';
 			})
 			.join('\n'),
 		'</div>'
