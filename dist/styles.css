@@ -54,12 +54,12 @@ h2 {
 
 @media screen and (device-width: 1072px) {
   h1 {
-    font-size: 146px;
+    font-size: 126px;
     font-weight: normal;
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 148px;
     color: grey;
     font-weight: normal;
     margin: 0;
@@ -89,9 +89,10 @@ p {
 }
 
 .bottom-nav {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
-  height: 10vh;
+  height: 100;
   width: 100%;
   background-color: #f3f3e5;
   cursor: pointer;
