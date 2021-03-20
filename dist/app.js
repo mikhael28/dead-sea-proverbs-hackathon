@@ -1,3 +1,5 @@
+
+/*
 var indexOfFirstVerse = 1;
 
 function showLastVerse() {
@@ -18,4 +20,81 @@ function showVerses() {
 	document.getElementById('reference-verse').innerText = '' + indexOfFirstVerse;
 	document.getElementById('verse-a').innerText = proverbs.chapters[0].verses[indexOfFirstVerse].text;
 	document.getElementById('verse-b').innerText = proverbs.chapters[0].verses[indexOfFirstVerse + 1].text;
+}
+*/
+
+function ProverbsVerses(elem, data) {
+	this.data = data;
+	this.selectedChapterIndex = 0;
+	this.selectedMapIndex = 0;
+	this.elem = elem;
+}
+
+ProverbsVerses.prototype.nextChapterIndex = function() {
+	if ((this.selectedChapterIndex + 1) >= this.data.chapters.length) {
+		this.selectedChapterIndex = 0;
+	} else {
+		this.selectedChapterIndex += 1;
+	}
+}
+
+ProverbsVerses.prototype.prevChapterIndex = function() {
+	if ((this.selectedChapterIndex - 1) < 0) {
+		this.selectedChapterIndex = this.data.chapters.length - 1;
+	} else {
+		this.selectedChapterIndex -= 1;
+	}
+}
+
+ProverbsVerses.prototype.next = function() {
+	if ((this.selectedMapIndex + 1) >= this.data.map[this.selectedChapterIndex].length) {
+		this.nextChapterIndex();
+		this.selectedMapIndex = 0;
+	} else {
+		this.selectedMapIndex += 1;
+	}
+
+	this.render();
+}
+
+ProverbsVerses.prototype.prev = function() {
+	if ((this.selectedMapIndex - 1) < 0) {
+		this.prevChapterIndex();
+		this.selectedMapIndex = this.data.map[this.selectedChapterIndex].length - 1;
+	} else {
+		this.selectedMapIndex -= 1;
+	}
+
+	this.render();
+}
+
+ProverbsVerses.prototype.render = function() {
+	var chapter = this.data.chapters[this.selectedChapterIndex];
+	var proverbsMap = this.data.map[this.selectedChapterIndex][this.selectedMapIndex];
+	var startVerse = proverbsMap[0];
+	var endVerse = proverbsMap[1];
+	var verses = chapter.verses.slice(startVerse - 1, endVerse || startVerse);
+	this.elem.innerHTML = this.template({
+		book: this.data.book,
+		chapterNum: chapter.chapter,
+		verses: verses,
+		startVerse: startVerse,
+		endVerse: endVerse
+	});
+}
+
+ProverbsVerses.prototype.template = function(data) {
+	return [
+		[
+			'<h2>',
+				data.book + ' <span id="reference-chapter">'+ data.chapterNum +'</span>:',
+				'<span id="reference-verse">'+ data.startVerse +'</span>',
+				(data.endVerse ? ' - <span>'+ data.endVerse +'</span>' : ''),
+			'</h2>'
+		].join(""),
+		'<hr style="width: 75%" />',
+		'<div class="verses">',
+			data.verses.map(function(verse) { return '<p>'+verse.text+'</p>'}).join("\n"),
+		'</div>',
+	].join("\n");
 }

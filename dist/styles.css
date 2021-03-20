@@ -19,22 +19,29 @@
 }
 
 body {
-  font-family: 'Anke';
+  /* font-family: 'Anke'; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  background: #f5f5dc;
+  padding: 1rem;
 }
 
 h1 {
   font-size: 48px;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 38px;
-  font-family: Gabrielle;
+  /* font-family: Gabrielle; */
+  font-weight: normal;
 }
 
 p {
-  font-family: 'Anke';
-  font-size: 36px;
+  /* font-family: 'Anke'; */
+  /* font-size: 36px; */
+  font-size: 2rem;
+  font-weight: normal;
 }
 
 /* @TODO: Add font */

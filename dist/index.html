@@ -10,7 +10,7 @@
 
 
 <body>
-    <section>
+    <section id="scriptures">
         <h2>Proverbs <span id="reference-chapter">3</span>:<span id="reference-verse">3</span></h2>
         
         <div class="verses">
@@ -22,12 +22,26 @@
 
     <div class="bottom-nav">
     
-        <button type="button" class="bottom-nav left" onclick="showLastVerse()"><p class="button-text">Previous</p></button>
-        <button type="button" class="bottom-nav right" onclick="showNextVerse()"><p class="button-text">
+        <button type="button" class="bottom-nav left" onclick="renderPrev()"><p class="button-text">Previous</p></button>
+        <button type="button" class="bottom-nav right" onclick="renderNext()"><p class="button-text">
             Next
         </p>
     </button>
     </div>
 
+    <script>
+        var prv = new ProverbsVerses(document.getElementById('scriptures'), window.proverbs);
+
+        prv.render();
+
+        function renderNext() {
+            prv.next();
+        }
+
+        function renderPrev() {
+            prv.prev();
+        }
+
+    </script>
 </body>
 </html>
