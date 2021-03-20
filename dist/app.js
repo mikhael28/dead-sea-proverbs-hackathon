@@ -55,8 +55,6 @@ ProverbsVerses.prototype.setMapIndex = function(index) {
 }
 
 ProverbsVerses.prototype.isBookmarked = function(chapterIndex, mapIndex) {
-  console.log("check for isBookmarked");
-
   const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || "[]");
   const id = `${chapterIndex}:${mapIndex}`;
   const foundIndex = bookmarks.map(b => b.id).indexOf(id);
@@ -77,14 +75,11 @@ ProverbsVerses.prototype.isBookmarked = function(chapterIndex, mapIndex) {
 
 ProverbsVerses.prototype.toggleBookmark = function() {
   const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || "[]");
-  console.log('bookmarks', bookmarks);
 
   if(this.isBookmarked(this.selectedChapterIndex, this.selectedMapIndex)) {
       const id = `${this.selectedChapterIndex}:${this.selectedMapIndex}`;
       const foundIndex = bookmarks.map(b => b.id).indexOf(id);
-      console.log('all bookmarks', bookmarks);
       bookmarks.splice(foundIndex, 1);
-      console.log('spliced bookmarks', bookmarks);
       localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
   } else {
     const newBookmark = {
@@ -94,7 +89,6 @@ ProverbsVerses.prototype.toggleBookmark = function() {
     };
     bookmarks.push(newBookmark);
     localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
-    console.log('added bookmark', newBookmark);
   }
 
   this.isBookmarked(this.selectedChapterIndex, this.selectedMapIndex);
