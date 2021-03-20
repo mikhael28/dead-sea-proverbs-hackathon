@@ -76,10 +76,12 @@ p {
   height: 10vh;
   width: 100%;
   background-color: #f3f3e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.flex-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
+.bottom-nav div {
+  margin: auto;
 }
