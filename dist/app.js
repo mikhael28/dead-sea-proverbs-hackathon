@@ -2,6 +2,7 @@ function ProverbsVerses(elem, data) {
 	this.data = data;
 	this.selectedChapterIndex = +localStorage.getItem('chapterIndex') || 0;
 	this.selectedMapIndex = +localStorage.getItem('mapIndex') || 0;
+  this.isBookmarked(this.selectedChapterIndex,this.selectedMapIndex);
 	this.elem = elem;
 }
 
@@ -53,20 +54,48 @@ ProverbsVerses.prototype.setMapIndex = function(index) {
   localStorage.setItem('mapIndex', this.selectedMapIndex);
 }
 
-ProverbsVerses.prototype.toggleBookmark = function() {
+ProverbsVerses.prototype.isBookmarked = function(chapterIndex, mapIndex) {
+  const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || "[]");
+  const id = `${chapterIndex}:${mapIndex}`;
+  const foundIndex = bookmarks.map(b => b.id).indexOf(id);
+
   const outline = document.getElementById("bookmark-outline");
   const filled = document.getElementById("bookmark-filled");
-  const isBookmarked = outline.style.display === 'none';
-  if(isBookmarked) {
-      outline.style.display = 'block';
-      filled.style.display = 'none';
-  } else {
+
+  if(foundIndex > -1) {
     outline.style.display = 'none';
     filled.style.display = 'block';
+  } else {
+    outline.style.display = 'block';
+    filled.style.display = 'none';
   }
+
+  return foundIndex > -1;
+}
+
+ProverbsVerses.prototype.toggleBookmark = function() {
+  const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || "[]");
+
+  if(this.isBookmarked(this.selectedChapterIndex, this.selectedMapIndex)) {
+      const id = `${this.selectedChapterIndex}:${this.selectedMapIndex}`;
+      const foundIndex = bookmarks.map(b => b.id).indexOf(id);
+      bookmarks.splice(foundIndex, 1);
+      localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+  } else {
+    const newBookmark = {
+      id: `${this.selectedChapterIndex}:${this.selectedMapIndex}`,
+      chapterIndex: this.selectedChapterIndex,
+      mapIndex: this.selectedMapIndex
+    };
+    bookmarks.push(newBookmark);
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+  }
+
+  this.isBookmarked(this.selectedChapterIndex, this.selectedMapIndex);
 }
 
 ProverbsVerses.prototype.render = function() {
+  this.isBookmarked(this.selectedChapterIndex, this.selectedMapIndex);
 	var chapter = this.data.chapters[this.selectedChapterIndex];
 	var proverbsMap = this.data.map[this.selectedChapterIndex][this.selectedMapIndex];
 	var startVerse = proverbsMap[0];
@@ -119,9 +148,12 @@ ProverbsVerses.prototype.getTextSizeClass = function(verses) {
 
 	return textSize;
 }
+<<<<<<< HEAD
 
 ProverbsVerses.prototype.homeScreenTemplate = function(data) {
 	return [
 
 	].join("\n");
 }
+=======
+>>>>>>> 2a9f204cbf409f3e29791ca4d5663bf48c51b455
