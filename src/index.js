@@ -1,12 +1,13 @@
 class HackathonTest {
   constructor() {
-    console.log("constructor");
+    this.elem = window.document.getElementById("test");
   }
 
-  log(...args) {
-    console.log(...args)
+  write(text) {
+    console.log("write");
+    this.elem.innerHTML = `${text}`;
   }
 }
 
 const hack = new HackathonTest();
-hack.log("hello there!");
+hack.write("Dead Sea!");
