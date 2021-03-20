@@ -1,11 +1,12 @@
 class HackathonTest {
   constructor() {
     this.elem = window.document.getElementById("test");
+    console.log("elem", this.elem);
   }
 
   write(text) {
     console.log("write");
-    this.elem.innerHTML = `${text}`;
+    this.elem.innerHTML = text;
   }
 }
 
@@ -28,4 +29,4 @@ class HackathonTest {
 // }
 
 const hack = new HackathonTest();
-hack.write("Dead Sea!");
+hack.write("Dead Sea Proverbs");
