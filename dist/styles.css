@@ -67,21 +67,22 @@ p {
 /* @TODO: Add font */
 .bottom-nav {
   display: flex;
+  justify-content: space-between;
   position: fixed;
   bottom: 0;
   height: 10vh;
 }
 
 .right {
-  right: 0;
+  /* right: 0; */
   background-color: palegoldenrod;
-  width: 50%;
+  /* width: 50%; */
   text-align: center;
 }
 
 .left {
-  left: 0;
-  width: 50%;
+  /* left: 0; */
+  /* width: 50%; */
 }
 
 .button-text {
