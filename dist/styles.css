@@ -35,7 +35,7 @@ body #bookmark {
 }
 
 body #scriptures {
-  padding: 2rem 4rem;
+  padding: 2rem 6rem;
   margin-bottom: 10vh;
 }
 
@@ -77,11 +77,11 @@ p {
   width: 100%;
   background-color: #f3f3e5;
   display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 
 .bottom-nav div {
-  margin: auto;
+  width: 50vw;
+  padding-top: 3vh;
+  padding-left: 25vw;
 }
