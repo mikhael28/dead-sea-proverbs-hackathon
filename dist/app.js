@@ -119,3 +119,9 @@ ProverbsVerses.prototype.getTextSizeClass = function(verses) {
 
 	return textSize;
 }
+
+ProverbsVerses.prototype.homeScreenTemplate = function(data) {
+	return [
+
+	].join("\n");
+}
