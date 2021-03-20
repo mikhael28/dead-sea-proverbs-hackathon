@@ -30,8 +30,8 @@ body {
 }
 
 body #bookmark {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 0;
 }
 
 body #scriptures {
