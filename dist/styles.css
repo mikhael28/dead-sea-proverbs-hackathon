@@ -24,9 +24,9 @@ html * {
 
 body {
   text-align: center;
-  background: #f5f5dc;
+  background: white;
   color: #333333;
-  padding: 1rem;
+  margin: 0px;
 }
 
 body #bookmark {
@@ -65,32 +65,16 @@ p {
   /*display: none;*/
 }
 
-/* @TODO: Add font */
 .bottom-nav {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
+  position: fixed; 
   bottom: 0;
   height: 10vh;
+  width: 100%;
+  background-color: #f3f3e5;
 }
 
-.right {
-  /* right: 0; */
-  background-color: palegoldenrod;
-  /* width: 50%; */
-  text-align: center;
-}
-
-.left {
-  /* left: 0; */
-  /* width: 50%; */
-}
-
-.button-text {
-  font-size: 4rem;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.flex-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
 }

@@ -6,6 +6,10 @@
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <script src="./proverbs.js" type="application/javascript"></script>
     <script src="./app.js" type="application/javascript"></script>
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"
+      data-auto-a11y="true"
+    ></script>
 </head>
 
 
@@ -25,14 +29,10 @@
     </section>
 
     <div class="bottom-nav">
-
-        <button type="button" class="left button-text" onclick="renderPrev()">
-
-                Previous
-            </button>
-        <button type="button" class="right button-text" onclick="renderNext()">
-            Next
-    </button>
+        <div class="flex-buttons">
+            <i class="fas fa-arrow-left" style="font-size: 48px; cursor: pointer;" onclick="renderPrev()"></i>
+            <i class="fas fa-arrow-right" style="font-size: 48px; cursor: pointer;" onclick="renderNext()"></i>
+        </div>
     </div>
 
     <script>
