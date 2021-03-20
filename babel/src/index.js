@@ -1,13 +1,13 @@
-// class HackathonTest {
-//   constructor() {
-//     this.elem = window.document.getElementById("test");
-//   }
+class HackathonTest {
+  constructor() {
+    this.elem = window.document.getElementById("test");
+  }
 
-//   write(text) {
-//     console.log("write");
-//     this.elem.innerHTML = `${text}`;
-//   }
-// }
+  write(text) {
+    console.log("write");
+    this.elem.innerHTML = `${text}`;
+  }
+}
 
 // class Proverbs {
 //   constructor(data) {
@@ -27,5 +27,5 @@
 //   }
 // }
 
-// const hack = new HackathonTest();
-// hack.write("Dead Sea!");
+const hack = new HackathonTest();
+hack.write("Dead Sea!");
