@@ -117,6 +117,7 @@ ProverbsVerses.prototype.render = function() {
 }
 
 ProverbsVerses.prototype.template = function(data) {
+	var textSizeClass = this.getTextSizeClass(data.verses);
 	return [
 		[
 			'<h2>',
@@ -125,8 +126,31 @@ ProverbsVerses.prototype.template = function(data) {
 				(data.endVerse ? ' - <span>'+ data.endVerse +'</span>' : ''),
 			'</h2>'
 		].join(""),
-		'<div class="verses">',
+		'<div class="verses '+ textSizeClass +'">',
 			data.verses.map(function(verse) { return '<h1>'+verse.text+'</h1>'}).join("\n"),
 		'</div>',
 	].join("\n");
+}
+
+ProverbsVerses.prototype.getTextSizeClass = function(verses) {
+	// Adjust these variables as needed
+	var CHAR_PER_LINE = 40;
+	var MAX = 20;
+	var NORMAL = 12;
+	// ***********************
+
+	var textSize = "text-normal";
+	var lineCount = verses.reduce(function(count, verse) {
+		return (count + Math.ceil(verse.text.length / CHAR_PER_LINE)) + 1;
+	}, 0);
+
+	console.log(lineCount);
+
+	if (lineCount > MAX) {
+		textSize = "text-small";
+	} else if (lineCount > NORMAL) {
+		textSize = "text-med";
+	}
+
+	return textSize;
 }
