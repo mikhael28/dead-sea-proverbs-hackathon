@@ -25,10 +25,8 @@ function showVerses() {
 
 function ProverbsVerses(elem, data) {
 	this.data = data;
-
-	// load from storage
-	this.selectedChapterIndex = 0;
-	this.selectedMapIndex = 0;
+	this.selectedChapterIndex = localStorage.getItem('chapterIndex') || 0;
+	this.selectedMapIndex = localStorage.getItem('mapIndex') || 0;
 	this.elem = elem;
 }
 
