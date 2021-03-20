@@ -84,7 +84,11 @@ ProverbsVerses.prototype.render = function() {
 }
 
 ProverbsVerses.prototype.toggleBookmark = function() {
-  console.log("toggleBookmark");
+  const bookmark = {
+    chapter: 1,
+    verse: 2
+  }
+  localStorage.setItem('bookmark', JSON.stringify(bookmark));
 }
 
 ProverbsVerses.prototype.template = function(data) {

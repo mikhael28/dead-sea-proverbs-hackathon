@@ -62,6 +62,7 @@ p {
 
 .bookmark-button #bookmark-filled {
   color: #F4C2C2;
+  /*display: none;*/
 }
 
 /* @TODO: Add font */
