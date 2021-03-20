@@ -148,12 +148,9 @@ ProverbsVerses.prototype.getTextSizeClass = function(verses) {
 
 	return textSize;
 }
-<<<<<<< HEAD
 
 ProverbsVerses.prototype.homeScreenTemplate = function(data) {
 	return [
 
 	].join("\n");
 }
-=======
->>>>>>> 2a9f204cbf409f3e29791ca4d5663bf48c51b455
