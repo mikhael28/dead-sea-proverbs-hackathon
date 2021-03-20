@@ -1,4 +1,67 @@
+@font-face {
+  font-family: Otto;
+  src: url(Otto.ttf);
+}
+
+@font-face {
+  font-family: Chancery;
+  src: url(chancur.tff);
+}
+
+@font-face {
+  font-family: Gabrielle;
+  src: url(DSGabriele.ttf);
+}
+
+@font-face {
+  font-family: Anke;
+  src: url(ankecallig-fg.ttf);
+}
+
 body {
-  font-family: sans-serif, arial, helvetica;
+  font-family: 'Anke';
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 38px;
+  font-family: Gabrielle;
+}
+
+p {
+  font-family: 'Anke';
+  font-size: 36px;
+}
+
+/* @TODO: Add font */
+
+.bottom-nav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+}
+
+.right {
+  right: 0;
+  background-color: palegoldenrod;
+  width: 50%;
+  text-align: center;
+}
+
+.left {
+  left: 0;
+  width: 50%;
+}
+
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
