@@ -163,7 +163,7 @@ h2 {
 }
 
 .theme-georgia .verses.text-normal p {
-  font-size: 95px;
+  font-size: 75px;
 }
 
 .verses.text-med p {
@@ -171,7 +171,7 @@ h2 {
 }
 
 .theme-georgia .verses.text-med p {
-  font-size: 84px;
+  font-size: 64px;
 }
 
 .verses.text-small p {
@@ -179,7 +179,7 @@ font-size: 68px;
 }
 
 .theme-georgia .verses.text-small p {
-  font-size: 51px;
+  font-size: 31px;
 }
 
 .verses.text-extra-small p {
@@ -187,7 +187,7 @@ font-size: 68px;
 }
 
 .theme-georgia .verses.text-extra-small p {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 /* .verses-georgia.text-normal {
